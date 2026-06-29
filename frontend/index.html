@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Securely access your personalized task lists. Register or sign in to start coordinating your daily schedules.">
+  <title>TaskUp - Connect & Manage</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- Primary Wrapper containing Auth Screen -->
+  <main class="auth-wrapper" id="auth-main-layout">
+    
+    <div class="auth-container card-glass" id="auth-panel">
+      
+      <!-- Toggleable Auth Headers -->
+      <header class="auth-header">
+        <h1 id="auth-title">Welcome Back</h1>
+        <p id="auth-subtitle">Unlock your productivity dashboard</p>
+      </header>
+
+      <!-- Connection/Auth Forms -->
+      <form id="auth-form" autocomplete="on">
+        
+        <!-- Username input -->
+        <div class="form-group">
+          <label for="username">USERNAME</label>
+          <input 
+            type="text" 
+            id="username" 
+            name="username" 
+            placeholder="Type your username..." 
+            class="form-control" 
+            required 
+            minlength="3"
+            maxlength="30"
+            autocomplete="username"
+          >
+        </div>
+
+        <!-- Password input -->
+        <div class="form-group">
+          <label for="password">PASSWORD</label>
+          <input 
+            type="password" 
+            id="password" 
+            name="password" 
+            placeholder="••••••••" 
+            class="form-control" 
+            required 
+            minlength="6"
+            autocomplete="current-password"
+          >
+        </div>
+
+        <!-- Actions -->
+        <button type="submit" class="btn btn-primary" id="auth-submit-btn" style="width: 100%; margin-top: 10px;">
+          Log In
+        </button>
+
+      </form>
+
+      <!-- Toggle Links -->
+      <footer class="auth-footer">
+        <p id="auth-toggle-context">
+          Don't have an account? 
+          <a id="auth-toggle-btn" role="button" tabindex="0">Sign Up</a>
+        </p>
+      </footer>
+
+    </div>
+
+  </main>
+
+  <!-- Frontend Logic Handler -->
+  <script src="app.js"></script>
+</body>
+</html>
